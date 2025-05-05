@@ -33,6 +33,15 @@ function draw() {
     case 'orbital':
       drawOrbital();
       break;
+    case 'pulse':
+      drawPulse();
+      break;
+    case 'constellation':
+      drawConstellation();
+      break;
+    case 'fluid':
+      drawFluid();
+      break;
     default:
       drawSimple();
   }
@@ -77,6 +86,27 @@ function setupButtons() {
   btnOrbital.addEventListener('click', () => {
     setActiveButton(btnOrbital);
     currentViz = 'orbital';
+  });
+
+  // Pulse button
+  const btnPulse = document.getElementById('btn-pulse');
+  btnPulse.addEventListener('click', () => {
+    setActiveButton(btnPulse);
+    currentViz = 'pulse';
+  });
+
+  // Constellation button
+  const btnConstellation = document.getElementById('btn-constellation');
+  btnConstellation.addEventListener('click', () => {
+    setActiveButton(btnConstellation);
+    currentViz = 'constellation';
+  });
+
+  // Fluid button
+  const btnFluid = document.getElementById('btn-fluid');
+  btnFluid.addEventListener('click', () => {
+    setActiveButton(btnFluid);
+    currentViz = 'fluid';
   });
 }
 
