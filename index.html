@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempora</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden;
+        }
+
+        #controls {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        button {
+            background: rgba(30, 30, 30, 0.7);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: sans-serif;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: rgba(60, 60, 60, 0.7);
+        }
+
+        button.active {
+            background: rgba(100, 100, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="controls">
+        <button id="btn-simple" class="active">Simple</button>
+        <button id="btn-circular">Circular</button>
+        <button id="btn-binary">Binary</button>
+        <button id="btn-falling">Falling</button>
+        <button id="btn-orbital">Orbital</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
+    <script src="time/simple.js"></script>
+    <script src="time/circular.js"></script>
+    <script src="time/binary.js"></script>
+    <script src="time/falling.js"></script>
+    <script src="time/orbital.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
