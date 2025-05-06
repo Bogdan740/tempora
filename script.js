@@ -42,6 +42,9 @@ function draw() {
     case 'fluid':
       drawFluid();
       break;
+    case 'bounce':
+      drawBounce();
+      break;
     default:
       drawSimple();
   }
@@ -107,6 +110,13 @@ function setupButtons() {
   btnFluid.addEventListener('click', () => {
     setActiveButton(btnFluid);
     currentViz = 'fluid';
+  });
+
+  // Bounce button
+  const btnBounce = document.getElementById('btn-bounce');
+  btnBounce.addEventListener('click', () => {
+    setActiveButton(btnBounce);
+    currentViz = 'bounce';
   });
 }
 
